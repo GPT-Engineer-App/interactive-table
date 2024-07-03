@@ -5,7 +5,6 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { FileInput } from "@/components/ui/file-input";
 
 const InteractiveTable = () => {
   const [rows, setRows] = useState([]);
@@ -95,7 +94,8 @@ const InteractiveTable = () => {
                 />
               </TableCell>
               <TableCell>
-                <FileInput
+                <input
+                  type="file"
                   onChange={(e) => handleUploadDocument(index, e.target.files[0])}
                   disabled={!isAdmin}
                 />
